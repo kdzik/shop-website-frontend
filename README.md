@@ -10,3 +10,5 @@ Implemented functionalities:
 - Contact form
 - Google Maps
 - Admin Panel
+- Login page
+

@@ -1,0 +1,87 @@
+:host {
+  display: block;
+  background: #e8e8e8;
+ // padding-bottom: 1em;
+}
+
+.flex-container {
+  .logo {
+    display: none;
+  }
+  .right {
+    padding: 0 1em;
+    p {
+      line-height: 200%;
+      margin-top: 0;
+    }
+    ul {
+      margin: 0 1em;
+      padding: 0;
+    }
+    li {
+      list-style: none;
+      padding: 0.3em 0;
+      i {
+        margin-right: 0.3em;
+        color: green;
+      }
+    }
+    .pros {
+      background: #dedede;
+      padding: 1em;
+      border-radius: 1em;
+      border: 1px solid #707070;
+    }
+  }
+}
+
+.services {
+  color: #fff;
+  text-align: center;
+  margin: 1em 0;
+  .dobrypunkt {
+    background: #eb5050;
+  }
+  .premium {
+    background: #000064;
+  }
+  > div {
+    padding: 1em;
+  }
+
+  .dobrypunkt{
+    img{
+        height: 80px;
+    }
+}
+.premium{
+    img{
+        height: 40px;
+        margin-top: 20px;
+    }
+}
+}
+
+@media (min-width: 700px) {
+  .flex-container {
+    display: flex;
+    justify-content: space-around;
+    .logo {
+      display: block;
+    }
+    .right {
+      max-width: 70%;
+    }
+  }
+
+  .services {
+    display: flex;
+    margin: 1em auto;
+    .logo {
+      min-height: 80px;
+    }
+  }
+  .pros{
+    display: flex;
+  }
+}

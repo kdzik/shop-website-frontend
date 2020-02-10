@@ -1,0 +1,26 @@
+<div id="navbar" class="navbar wrap">
+    <div class="logo">
+        <a routerLink="/"><img class="logo__img" src="assets/logo.png" alt="Logo"></a>
+    </div>
+    <div class="menu">
+        <button class="hamburger"><span class="hamburger__content"><span class="hamburger__bar"></span></span></button>
+        <ul class="menu__list">
+            <li><a [hidden]="!isUserLoggedIn()" routerLink="admin">PANEL</a></li>
+            <li><a [hidden]="!isUserLoggedIn()" (click)="logout()" routerLink="admin">WYLOGUJ</a></li>
+            <li><a routerLink="" fragment="promocje" (click)="scroll()">PROMOCJE</a></li>
+            <li><a routerLink="przez-telefon" fragment="oferta" (click)="scroll()">OFERTA</a></li>
+            <li><a routerLink="przez-telefon">ZAKUPY PRZEZ TELEFON</a></li>
+            <li><a routerLink="" fragment="kontakt" (click)="scroll()">KONTAKT</a></li>
+        </ul>
+        <div class="mobile">
+                <ul class="mobile__list">
+                    <a [hidden]="!isUserLoggedIn()" routerLink="admin"><li>PANEL</li></a>
+                    <a [hidden]="!isUserLoggedIn()" (click)="logout()" routerLink="admin"><li>WYLOGUJ</li></a>
+                    <a routerLink="" fragment="promocje"><li>PROMOCJE</li></a>
+                    <a routerLink="przez-telefon" fragment="oferta"><li>OFERTA</li></a>
+                    <a routerLink="przez-telefon"><li>ZAKUPY PRZEZ TELEFON</li></a>
+                    <a routerLink="" fragment="kontakt"><li>KONTAKT</li></a>
+                </ul>
+            </div>
+    </div>
+</div>

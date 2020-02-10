@@ -1,0 +1,18 @@
+<section id="kontakt" class="contact">
+    <div class="container p1">
+        <div class="header">
+            <hr>
+            <h2>FORMULARZ KONTAKTOWY</h2>
+            <h1>FORMULARZ</h1>
+        </div>
+
+        <form>
+            <span class="alert-success" *ngIf="emailStatusOK">{{emailStatusOK}}</span> 
+            <span class="alert-warning" *ngIf="emailStatusERR">{{emailStatusERR}}</span> 
+            <input type="email" name="from" [(ngModel)]="email.fromEmailAddress" placeholder="Email">
+            <input type="text" name="title" [(ngModel)]="email.emailTitle" placeholder="Tytuł">
+            <textarea name="message" [(ngModel)]="email.emailMessage" placeholder="Napisz wiadomość" rows="8"></textarea>
+            <input type="submit" (click)="sendEmail()" value="{{sendButton}}">
+        </form>
+    </div>
+</section>

@@ -1,0 +1,23 @@
+<div class="categories">
+    <div class="category">
+    <h4>{{categoryName}}</h4>
+        <div class="products-container">
+            <div *ngFor="let product of products | async | slice: startPage:paginationLimit" class="product">
+                <img src="http://localhost:8080/images/{{product.image[0].photoName}}">
+                <span class="price">{{product.productPrice | currency:'':'':'1.2-2'}}</span>
+                <h5>{{product.productName}}</h5>
+                <span *ngIf="isUserLoggedIn() && route =='/admin'" (click)="deleteModal = !deleteModal; deletedProduct = product" class="delete">X</span>
+                <a *ngIf="isUserLoggedIn()&& route =='/admin'" [routerLink]="['edit-product', product.productId]"><span class="edit">E</span></a>
+            </div>   
+    </div>
+    <button class="more" *ngIf ="paginationLimit < (products | async)?.length" (click)="paginationLimit = paginationLimit+6">Pokaż więcej</button>
+
+</div>
+</div>
+<div *ngIf="deleteModal" class="modal">
+    <div class="modal__body">
+    <p>Czy na pewno chcesz usunąć {{deletedProduct.productName}}?</p>
+    <button (click)="deleteModal = !deleteModal" class="cancelModal">Anuluj</button>
+    <button (click)="deleteProduct(deletedProduct.productId)" class="deleteModal">Usuń</button>
+    </div>
+</div>

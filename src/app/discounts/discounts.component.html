@@ -1,0 +1,29 @@
+<section id="promocje" class="parent">
+  <div class="clip-me"></div>
+  <div class="container wrap">
+    <div class="header">
+      <hr>
+      <h2>AKTUALNE PROMOCJE</h2>
+      <h1>PROMOCJE</h1>
+    </div>
+
+
+    <owl-carousel-o [options]="customOptions">
+
+      <ng-container *ngFor="let slide of productsOnDiscount$ | async"> 
+   
+        <ng-template carouselSlide>
+          <div class="slide">
+            <img src="http://localhost:8080/images/{{slide.image[0].photoName}}">
+  
+            <span class="price">{{slide.productPrice | currency:'':'':'1.2-2'}}</span>
+          </div>
+          <h4>{{slide.productName}}</h4>
+          <h5>{{slide.productDiscount}}</h5>
+        </ng-template>
+      </ng-container>
+
+    </owl-carousel-o>
+
+  </div>
+</section>

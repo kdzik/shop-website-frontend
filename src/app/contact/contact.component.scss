@@ -1,0 +1,64 @@
+#kontakt{
+  position: relative;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  > div {
+    margin: auto;
+    text-align: center;
+  }
+}
+
+.clip{
+  clip-path: polygon(0 0, 0% 100%, 100% 100%);
+  position: absolute;
+  background: #EB5050;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.info {
+  font-size: 1.7em;
+  font-weight: bold;
+  a{
+      text-decoration: none;
+      color: #000;
+  }
+  i {
+    margin-right: 0.5em;
+  }
+  p:first-child {
+    margin: 1em 0 0 0;
+    padding: 0;
+  }
+}
+
+.map{
+    width: 300px;
+    height: 300px;
+}
+
+@media (min-width: 800px) {
+  .flex-container {
+    justify-content: center;
+    flex-direction: row;
+    margin: 2em 0 2em 0;
+    > div {
+      text-align: left;
+    }
+  }
+
+  .info{
+      p:first-child{
+          margin: 0;
+      }
+  }
+  .map{
+      height: 400px;
+      width: 500px;
+  }
+
+}

@@ -1,0 +1,39 @@
+<section class="container">
+    <form class="container__form" (ngSubmit)="saveProduct()" #f="ngForm">
+        <p *ngIf="errorMessage" class="alert-warning">{{errorMessage}}</p>
+        <fieldset>
+            <label>Nazwa produktu</label>
+            <input type="text" #name="ngModel" [(ngModel)]="product.productName" id="name" name="name" required>
+            <span *ngIf="!name.valid && name.touched">Wprowadzona nazwa jest niepoprawna!</span>
+        </fieldset>
+        <fieldset>
+            <label>Kategoria</label>
+            <select id="category" name="category" [(ngModel)]="product.productCategory" required>
+                <option value="Nabial">Nabiał</option>
+                <option value="Pieczywo">Pieczywo</option>
+                <option value="Napoje">Napoje</option>
+            </select>
+            <span *ngIf="!price.valid && price.touched">Wybierz kategorię!</span>
+        </fieldset>
+        <fieldset>
+            <label>Cena</label>
+            <input type="text" #price="ngModel" [(ngModel)]="product.productPrice" name="price" id="price" required>
+            <span *ngIf="!price.valid && price.touched">Wprowadź cenę!</span>
+        </fieldset>
+        <fieldset>
+            <label>Zdjęcie</label>
+            <input type="file" name="image" id="image" accept="image/*" (change)="onFileSelected($event)" #imageInput>
+            <div class="image__container">
+                <img [src]="imgURL" height="200" *ngIf="imgURL">
+                <span *ngIf="progress">{{progress}}%</span>
+            </div>
+        </fieldset>
+        <fieldset>
+            <label>Tekst promocji</label>
+            <input type="text" [(ngModel)]="product.productDiscount" name="special-msg" id="special-msg">
+        </fieldset>
+        <fieldset>
+        <button type="submit" [disabled]="!f.valid">{{formType}}</button>
+        </fieldset>
+    </form>
+</section>

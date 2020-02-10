@@ -1,0 +1,55 @@
+.clip-me {
+  clip-path: polygon(0 0, 0% 100%, 100% 0);
+  position: absolute;
+  background: #e8e8e8;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.parent {
+  position: relative;
+}
+
+.price {
+  position: absolute;
+  background-color: orange;
+  right: 0px;
+  top: 0px;
+  z-index: 10;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 60px;
+}
+
+.slide {
+  padding: 20px 40px 10px 40px;
+  position: relative;
+  margin: 0 20px;
+  height: auto;
+
+  img{
+    border: 1px solid black;
+    height: auto;
+  }
+}
+
+h4 {
+  font-size: 1.2em;
+  text-align: center;
+  margin: 0;
+}
+
+h5{
+  text-align: center;
+  background-color: red;
+  color: yellow;
+  padding: 0.2em;
+  border-radius: 0.5em;
+  margin: .4em 3em;
+}

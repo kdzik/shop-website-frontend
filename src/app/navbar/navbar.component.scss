@@ -1,0 +1,146 @@
+$primary-color: #fff700;
+
+:host {
+  background-color: $primary-color;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+.menu__list {
+  display: none;
+  li {
+    margin: 0 1em;
+  }
+  a {
+    color: #000;
+    font-weight: bold;
+  }
+  a:hover {
+    color: #ccc;
+  }
+}
+
+.logo__img {
+  height: 3.75rem;
+}
+
+.hamburger {
+  background: inherit;
+  border: 0;
+  display: block;
+  position: absolute;
+  z-index: 2000;
+  right: 15px;
+  top: 40px;
+  padding: 10px;
+  &:focus,
+  &__content:focus {
+    outline: none;
+  }
+  &:focus > &__content {
+    box-shadow: 0 0 2px 2px #51a7e8;
+    color: lime;
+  }
+  &__bar {
+    position: relative;
+    width: 35px;
+    height: 2px;
+    background-color: #000;
+    transition: transform 220ms ease-in-out;
+    display: block;
+    &:before,
+    &:after {
+      display: block;
+      position: absolute;
+      width: 35px;
+      height: 2px;
+      background-color: #000;
+      content: "";
+    }
+    &:before {
+      top: -12px;
+      transition: top 100ms 250ms ease-in, transform 220ms ease-in-out;
+    }
+    &:after {
+      bottom: -12px;
+      transition: bottom 100ms 250ms ease-in, transform 220ms ease-in-out;
+    }
+  }
+}
+
+.hamburger--active {
+  position: fixed;
+  .hamburger__bar {
+    transform: rotate(225deg);
+    transition: transform 220ms 120ms ease-in-out;
+    &:before {
+      top: 0;
+      transition: top 100ms ease-out;
+      background-color: #fff;
+    }
+    &:after {
+      bottom: 0;
+      transform: rotate(-90deg);
+      transition: bottom 100ms ease-out, transform 220ms 120ms ease-in-out;
+      background-color: #fff;
+    }
+  }
+}
+
+.mobile {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(#eb5050, 0.95);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  z-index: 1001;
+  &__list {
+    align-self: center;
+    a {
+      color: #fff;
+      width: 100%;
+      text-align: center;
+      font-size: 1.4em;
+      li {
+        padding: 1em;
+      }
+    }
+  }
+}
+
+@media (min-width: 854px) {
+  .hamburger {
+    display: none;
+  }
+  .menu__list {
+    display: block;
+    li {
+      float: left;
+    }
+  }
+}
+

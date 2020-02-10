@@ -1,0 +1,14 @@
+.clip {
+  clip-path: polygon(0 25%, 0 75%, 100% 50%);
+  position: absolute;
+  background: #eb5050;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+@media (min-width: 700px) {
+  .clip {
+    clip-path: polygon(0 0, 0% 100%, 100% 50%);
+  }
+}

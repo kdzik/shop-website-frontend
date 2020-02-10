@@ -1,0 +1,6 @@
+<section id="oferta" class="container wrap">
+        <a *ngIf="isUserLoggedIn() && route =='/admin'" class="add__product" [routerLink]="['edit-product/-1']">Dodaj produkt +</a>
+        <app-products-category [products]="napoje$" categoryName="Napoje"></app-products-category>
+        <app-products-category [products]="nabial$" categoryName="Nabiał"></app-products-category>
+        <app-products-category [products]="pieczywo$" categoryName="Pieczywo"></app-products-category>
+ </section>

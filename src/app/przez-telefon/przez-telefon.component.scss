@@ -1,0 +1,69 @@
+.description {
+  line-height: 200%;
+  margin-bottom: 2em;
+  padding: 0 1em;
+}
+
+.mt1{
+    margin-top: 2em;
+}
+
+.contact{
+    font-size: 1.7em;
+    font-weight: bold;
+    background: #EB5050;
+    color: #fff;
+    text-align: center;
+    a{
+        text-decoration: none;
+        color: #fff;
+    }
+    i {
+      margin-right: 0.5em;
+    }
+    p{
+        margin-top: 0;
+    }
+}
+
+.instructions {
+  background: #e8e8e8;
+  padding: 2em;
+}
+
+h4 {
+  margin: 0;
+  padding: 0 0 1em 0;
+  font-size: 1.2em;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.instruction:first-child {
+  margin-bottom: 1em;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0 1em;
+  max-width: 400px;
+  li{
+      margin-bottom: 0.875em;
+  }
+}
+
+@media (min-width: 700px) {
+  .flex-container {
+    flex-direction: row;
+  }
+  
+.instruction:first-child {
+    margin-bottom: 0;
+    margin-right: 3em;
+  }
+}

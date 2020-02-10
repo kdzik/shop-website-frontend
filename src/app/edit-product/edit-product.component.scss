@@ -1,0 +1,80 @@
+form{
+    .ng-invalid.ng-touched{
+        border: 4px solid red;
+    }
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    .container__form{
+        background-color: #fafafa;
+        border-radius: 2rem;
+        max-width: 400px;
+        padding: 2em;
+        border: 1px solid #ececec;
+        -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.26);
+-moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.26);
+box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.26);
+
+       fieldset{
+           border: 0;
+           display: flex;
+           label{
+               font-size: 1em;
+               color: #777;
+           }
+           input, select{
+               width: 100%;
+               background-color: #e0e0e0;
+               border-radius: 1em;
+               border: 0;
+               margin: 0;
+               padding: .5em;
+               -ms-box-sizing:content-box;
+                -moz-box-sizing:content-box;
+                -webkit-box-sizing:content-box; 
+                box-sizing:content-box;
+           }
+           .image__container{
+               display: flex;
+               justify-content: center;
+               position: relative;
+                img{
+                margin: 1em;
+                }
+                span {
+                    position: absolute;
+                    background: rgba(0,0,0,0.7);
+                    top: 80px;
+                    z-index: 10;
+                    font-weight: bold;
+                    color: #fff;
+                    border-radius: 50%;
+                    width: 60px;
+                    height: 60px;
+                    text-align: center;
+                    font-size: 1.2em;
+                    line-height: 60px;
+                  }
+           }
+       }
+
+       button{
+        background: #EB5050;
+        color: #fff;
+        margin: 1em auto 0 auto;
+        padding: 1em 2em;
+        border: 0;
+        cursor: pointer;
+      }
+      button:disabled{
+          background: #b2b2b2;
+          cursor: default;
+      }
+    }
+}
+
+  

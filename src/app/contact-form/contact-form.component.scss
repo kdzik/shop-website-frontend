@@ -1,0 +1,52 @@
+.clip-me {
+    clip-path: polygon(0 0, 0% 100%, 100% 0);
+    position: absolute;
+    background: #EB5050;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  .contact{
+      position:relative;
+  }
+
+  .contact__container{
+    padding: 20px;
+  }
+
+.p1{
+    padding: 2em 0;
+}
+
+  form{
+      display: flex;
+      flex-direction: column;
+      max-width: 450px;
+      background: #E8E8E8;
+      padding: 1em 2em;
+      margin: 20px;
+      input, textarea{
+        display: block;
+        padding: 0.5em;
+        margin: 0.5em 0;
+        border: 0;
+        background: #F3F3F3;
+      }
+      [type="submit"]{
+        background: #EB5050;
+        color: #fff;
+        padding: 1em;
+        cursor: pointer;
+      }
+  }
+
+  @media (min-width: 580px){
+    [type="submit"]{
+        width: 50%;
+    }
+    form{
+        margin: auto;
+        padding: 2em 3em;
+    }
+  }

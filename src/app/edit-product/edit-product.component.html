@@ -1,5 +1,5 @@
 <section class="container">
-    <form class="container__form" (ngSubmit)="saveProduct()" #f="ngForm">
+    <form class="container__form" (ngSubmit)="saveProduct(product.productId)" #f="ngForm">
         <p *ngIf="errorMessage" class="alert-warning">{{errorMessage}}</p>
         <fieldset>
             <label>Nazwa produktu</label>

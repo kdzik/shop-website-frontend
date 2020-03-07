@@ -12,3 +12,4 @@ Implemented functionalities:
 - Admin Panel
 - Login page
 
+Working demo: http://krystiandzik.com/delikatesy-u-dzika/
